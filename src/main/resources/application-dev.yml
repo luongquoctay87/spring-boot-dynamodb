@@ -1,0 +1,27 @@
+spring:
+  config:
+    activate:
+      on-profile: dev
+
+springdoc:
+  api-docs:
+    enabled: true
+  swagger-ui:
+    enabled: true
+openapi:
+  service:
+    api-docs: api-service
+    server: ${API_URL:http://localhost:8080}
+    title: API-Service Documents
+    version: 1.0.0
+
+cors:
+  allow:
+    origins: http://localhost:8500
+
+amazon:
+  dynamodb:
+    endpoint: ${AMAZON_DYNAMODB_ENDPOINT}
+    region: ${AMAZON_DYNAMODB_REGION}
+    accessKey: ${AMAZON_DYNAMODB_ACCESS_KEY}
+    secretKey: ${AMAZON_DYNAMODB_SECRET_KEY}
